@@ -1,9 +1,119 @@
-import React from 'react'
+import React, { Component } from "react";
 
-const Home = () => {
+export default class Home extends Component {
+  inViewport = (elem) => {
+    var bounding = elem.getBoundingClientRect();
+    // console.log(bounding);
+    // console.log( bounding.bottom <=
+    //   (window.innerHeight || document.documentElement.clientHeight));
+    // console.log( bounding.right <=
+    //   (window.innerWidth || document.documentElement.clientWidth));
     return (
-        <h1>Hi I'm Home!!</h1>
-    )
-}
+      bounding.top >= -(window.innerHeight/3)  &&
+      bounding.left >= 0 &&
+      bounding.bottom <=
+        (window.innerHeight+(window.innerHeight/3) || document.documentElement.clientHeight + (document.documentElement.clientHeight/3)) &&
+      bounding.right <=
+        (window.innerWidth || document.documentElement.clientWidth)
+    );
+  };
 
-export default Home
+  componentDidMount() {
+    window.addEventListener("scroll", () => {
+      // console.log(this.inViewport(document.querySelectorAll(".featureContainer")[0]));
+      document.querySelectorAll(".featureContainer").forEach((el) => {
+        if (
+          this.inViewport(el) &&
+          !el.children[0].classList.contains("fadeInRight") &&
+          !el.children[1].classList.contains("fadeInLeft")
+        ) {
+          el.children[0].classList.add("fadeInRight");
+          el.children[1].classList.add("fadeInLeft");
+        }
+      });
+    });
+    window.addEventListener("load", () => {
+      // console.log(this.inViewport(document.querySelectorAll(".featureContainer")[0]));
+      document.querySelectorAll(".featureContainer").forEach((el) => {
+        if (
+          this.inViewport(el) &&
+          !el.children[0].classList.contains("fadeInRight") &&
+          !el.children[1].classList.contains("fadeInLeft")
+        ) {
+          el.children[0].classList.add("fadeInRight");
+          el.children[1].classList.add("fadeInLeft");
+        }
+      });
+    });
+  }
+
+  render() {
+    return (
+      <section>
+        <div className="banner">
+          <div className="actionCallContainer fadeInUp">
+            <h1>Planning Trips With Points Has Never Been Easier</h1>
+            <p>
+              Collaborate & build your own itineraries, get all your travel
+              questions answered, & learn how to travel for free.
+            </p>
+            <div className="callToAction">
+              {" "}
+              <input type="email" placeholder="Enter your email"></input>{" "}
+              <button>Get early access</button>
+            </div>
+            <span className="errorMsg">Email is required</span>
+          </div>
+          <img
+            className="growIn"
+            src={require("../Assets/Images/glob.png")}
+            alt="Globe"
+          ></img>
+        </div>
+        <div className="featureContainer">
+          <img
+            src={require("../Assets/Images/section1.png")}
+            alt="Itineraries Flow"
+          ></img>
+          <div className="featureInfo">
+            <h2>Get Excited for Your Upcoming Trip</h2>
+            <p>
+              Collaborate with your friends to build awesome itineraries & get
+              everything you need at your fingertips. Browse through their
+              itineraries for inspiration, and post your trips for everyone to
+              see.
+            </p>
+          </div>
+        </div>
+        <div className="featureContainer">
+          <div className="featureInfo">
+            <h2>Creating A Community of Travellers</h2>
+            <p>
+              There are too many unreliable sources online when you’re planning
+              your trips. Get all your travel questions answered in one place
+              from trusted resources- your friends!
+            </p>
+          </div>
+          <img
+            src={require("../Assets/Images/section2.png")}
+            alt="Community Flow"
+          ></img>
+        </div>
+        <div className="featureContainer">
+          <img
+            src={require("../Assets/Images/section3.png")}
+            alt="Resources Flow"
+          ></img>
+          <div className="featureInfo">
+            <h2>Creating A Community of Travellers</h2>
+            <p>
+              There are too many unreliable sources online when you’re planning
+              your trips. Get all your travel questions answered in one place
+              from trusted resources- your friends!
+            </p>
+          </div>
+        </div>
+      </section>
+    );
+  }
+}

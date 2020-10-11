@@ -7,6 +7,7 @@ import Blog from "./Pages/Blog";
 import Footer from "./Components/Footer";
 
 export default class App extends Component {
+
   render() {
     return (
       <Router>
@@ -17,7 +18,7 @@ export default class App extends Component {
               <Home />
             </Route>
             <Route exact path="/blog">
-              <Blog />
+              {/* <Blog /> */}
             </Route>
           </Switch>
           <Footer></Footer>
