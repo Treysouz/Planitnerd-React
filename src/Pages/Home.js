@@ -72,16 +72,13 @@ export default class Home extends Component {
         </div>
         <div className="featureContainer">
           <img
-            src={require("../Assets/Images/section1.png")}
+            src={require("../Assets/Images/cellupdated.gif")}
             alt="Itineraries Flow"
           ></img>
           <div className="featureInfo">
-            <h2>Get Excited for Your Upcoming Trip</h2>
+            <h2>Got Points? Get Excited for Your Upcoming Trip</h2>
             <p>
-              Collaborate with your friends to build awesome itineraries & get
-              everything you need at your fingertips. Browse through their
-              itineraries for inspiration, and post your trips for everyone to
-              see.
+              While looking to see how you can spend your credit card travel points on your next trip, collaborate with your friends to build awesome itenaries & get everything you need to plan at your fingertips.
             </p>
           </div>
         </div>
