@@ -9,10 +9,10 @@ export default class Home extends Component {
     // console.log( bounding.right <=
     //   (window.innerWidth || document.documentElement.clientWidth));
     return (
-      bounding.top >= -(window.innerHeight/3)  &&
+      bounding.top >= -(window.innerHeight/4)  &&
       bounding.left >= 0 &&
       bounding.bottom <=
-        (window.innerHeight+(window.innerHeight/3) || document.documentElement.clientHeight + (document.documentElement.clientHeight/3)) &&
+        (window.innerHeight+(window.innerHeight/4) || document.documentElement.clientHeight + (document.documentElement.clientHeight/4)) &&
       bounding.right <=
         (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -49,7 +49,7 @@ export default class Home extends Component {
 
   render() {
     return (
-      <section>
+      <section id="mainSection"> 
         <div className="banner">
           <div className="actionCallContainer fadeInUp">
             <h1>Planning Trips With Points Has Never Been Easier</h1>
@@ -61,8 +61,9 @@ export default class Home extends Component {
               {" "}
               <input type="email" placeholder="Enter your email"></input>{" "}
               <button>Get early access</button>
+              <span className="errorMsg">Email is required</span>
             </div>
-            <span className="errorMsg">Email is required</span>
+    
           </div>
           <img
             className="growIn"
@@ -71,9 +72,9 @@ export default class Home extends Component {
           ></img>
         </div>
         <div className="featureContainer">
-          <img
+          <img className="phoneGif"
             src={require("../Assets/Images/cellupdated.gif")}
-            alt="Itineraries Flow"
+            alt="Points Flow"
           ></img>
           <div className="featureInfo">
             <h2>Got Points? Get Excited for Your Upcoming Trip</h2>

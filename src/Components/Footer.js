@@ -17,13 +17,14 @@ export default class Footer extends Component {
           <p>Contact us to become a guide & get paid to create itineraries.</p>
         </div>
         <div className="bottomFooter">
-          <div className="footerCallToActionContainer">
-            <div className="callToAction">
-              <input type="email" placeholder="Enter your email"></input>{" "}
-              <button>Get early access</button>
-            </div>
+          <div className="callToAction">
+            <input type="email" placeholder="Enter your email"></input>{" "}
+            <button>Get early access</button>
             <span className="errorMsg">Email is required</span>
           </div>
+    
+
+
           <div className="footerLinksContainer">
             <div className="textLinks">
               <Link className="footerLink" to="/">
@@ -52,9 +53,9 @@ export default class Footer extends Component {
             </div>
           </div>
           <div className="copyrightContainer">
-              <p>© Copyright 2020 | Planitnerd, Inc.</p>
-              <br></br>
-              <p>ALL RIGHTS RESERVED</p>
+            <p>© Copyright 2020 | Planitnerd, Inc.</p>
+            <br></br>
+            <p>ALL RIGHTS RESERVED</p>
           </div>
         </div>
       </footer>

@@ -2,12 +2,12 @@
 @import "./home";
 @import "./blog";
 
-
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: $primaryFont;
+
 }
 
 h1,
@@ -39,7 +39,6 @@ header {
   .logo {
     width: 200px;
     height: auto;
-
   }
   nav {
     display: flex;
@@ -58,13 +57,19 @@ header {
     }
   }
 }
-
+main{
+  overflow-x: hidden;
+}
 button {
   background: $primaryGreen;
   border-color: $primaryGreen;
   border-radius: 0.3rem;
   font-size: 1.5rem;
-  padding: 0.5rem 1rem;
+
+  padding: 2% 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: white;
   text-align: center;
   border: none;
@@ -72,13 +77,16 @@ button {
 .callToAction {
   display: flex;
   justify-content: space-between;
-
+  align-items: center;
+  flex-wrap: wrap;
+  height: 50px;
+  position: relative;
   button {
-    min-height: 54px;
+    height: 100%;
   }
 }
 input {
-  padding: 4% 1%;
+  padding: 2% 1%;
   font-size: 1.5rem;
 
   border-radius: 0.3rem;
@@ -102,13 +110,14 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     flex-direction: column;
     p {
       margin-top: 2%;
     }
   }
   .bottomFooter {
-    padding: 3% 0;
+    padding: 3% 5%;
     background-color: $primaryGray;
     height: 60%;
     width: 100%;
@@ -117,17 +126,20 @@ footer {
     align-items: center;
     flex-direction: column;
     .errorMsg {
-      padding-top: 10%;
+      margin-top: 2%;
+      position: absolute;
+      top: 45px;
     }
     input {
-      width: 425px;
-      height: 54px;
-      margin-right: 2vw;
+      width: 500px;
+      margin-right: 1vw;
+      height: 50px;
     }
     .footerLinksContainer {
       display: flex;
       flex-direction: column;
       justify-content: center;
+
       .textLinks,
       .iconLinks {
         display: flex;
@@ -149,10 +161,9 @@ footer {
           color: $primaryGreen;
         }
       }
-      
     }
-    .copyrightContainer{
-      p{
+    .copyrightContainer {
+      p {
         font-size: 1.2rem;
         color: #6c757d;
         text-align: center;
@@ -160,76 +171,348 @@ footer {
     }
   }
 }
-section{
+section {
   padding-top: 10vh;
   position: relative;
 }
 .errorMsg {
   color: red;
+  display: inline-block;
+  width: 100%;
 }
 
 /*-----Animations ----- */
-
-@keyframes fadeInUp{
-  0%{
+@keyframes openMobileNav {
+  0% {
+    height: 0%;
+  }
+  100% {
+    height: 40vh;
+  }
+}
+@keyframes fadeInUp {
+  0% {
     opacity: 0;
     transform: translate(0px, 500px);
   }
-  100%{
+  100% {
     opacity: 100%;
     transform: translate(0px, 0px);
   }
 }
 
-@keyframes fadeInRight{
-  0%{
+@keyframes fadeInRight {
+  0% {
     opacity: 0;
     transform: translate(-500px, 0px);
   }
-  100%{
+  100% {
     opacity: 100%;
     transform: translate(0, 0px);
   }
 }
 
-
-@keyframes fadeInLeft{
-  0%{
+@keyframes fadeInLeft {
+  0% {
     opacity: 0;
     transform: translate(500px, 0px);
   }
-  100%{
+  100% {
     opacity: 100%;
     transform: translate(0px, 0px);
   }
 }
 
-@keyframes growIn{
-  0%{
+@keyframes growIn {
+  0% {
     opacity: 0;
-    transform: scale(.2);
+    transform: scale(0.2);
   }
-  100%{
+  100% {
     opacity: 100%;
     transform: translate(0px, 0px);
-    transform: scale(1)
+    transform: scale(1);
   }
 }
 
-.fadeInUp{
+.fadeInUp {
   animation: fadeInUp 1s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
-.fadeInRight{
+.fadeInRight {
   animation: fadeInRight 1s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
-.fadeInLeft{
+.fadeInLeft {
   animation: fadeInLeft 1s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
 }
 
-.growIn{
+.growIn {
   animation: growIn 1s;
-  animation-fill-mode: forwards;  
+  animation-fill-mode: forwards;
+}
+
+/*----- Media Queries ----- */
+@media (max-width: 1400px), (max-height: 600px) {
+  header nav {
+    width: 30%;
+  }
+  h1 {
+    font-size: 3rem;
+  }
+  h2 {
+    font-size: 3rem;
+  }
+  p,
+  footer .bottomFooter .footerLinksContainer .footerLink,
+  footer .bottomFooter .copyrightContainer p {
+    font-size: 1.2rem;
+  }
+  .featureContainer img {
+    width: 200px;
+  }
+  .featureContainer .phoneGif {
+    width: 400px;
+  }
+  .banner img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1350px), (max-height: 450px) {
+  h1,
+  h2 {
+    font-size: 2.5rem;
+  }
+  p,
+  footer .bottomFooter .footerLinksContainer .footerLink,
+  footer .bottomFooter .copyrightContainer p {
+    font-size: 1rem;
+  }
+  .featureContainer img {
+    width: 150px;
+    margin: 0 2vw;
+  }
+  .featureContainer .phoneGif {
+    width: 350px;
+  }
+  .banner img {
+    width: 400px;
+  }
+}
+
+@media (max-width: 1200px), (max-height: 350px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  .featureContainer {
+    padding: 0 2vw;
+  }
+  .featureContainer img {
+    width: 150px;
+    margin: 0 5vw;
+  }
+  .featureContainer .phoneGif {
+    width: 300px;
+  }
+  .callToAction {
+    height: 50px;
+  }
+  .banner img {
+    width: 300px;
+  }
+  .banner {
+    padding: 0 2vw;
+  }
+  input {
+    font-size: 1.2rem;
+  }
+  .errorMsg {
+    font-size: 0.8rem;
+  }
+  .banner .actionCallContainer {
+    width: 450px;
+  }
+  .banner .actionCallContainer input {
+    width: 300px;
+  }
+  button {
+    font-size: 1rem;
+  }
+  header nav .navLink {
+    font-size: 1rem;
+  }
+  header nav {
+    width: 40%;
+  }
+}
+@media (max-width: 800px), (max-height: 300px) {
+  header {
+    flex-wrap: wrap;
+  }
+  header nav {
+    width: 100%;
+    display: inline-block;
+  }
+  .mobileNavIcon{
+    font-size: 1.5rem;
+    &:hover{
+      color: $primaryGreen;
+      transition: color .5s;
+    }
+    &.active{
+      color: $primaryGreen;
+      transition: color .5s;
+    }
+  }
+  .navDrawer {
+    position: absolute;
+    width: 100vw;
+    background-color: #eee;
+    box-shadow: 0px 4px 4px 0px black;
+    height: 0vh;
+    top: 10vh;
+    overflow: hidden;
+    animation: openMobileNav 1s;
+    animation-fill-mode: forwards;
+    .mobileNav {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-around;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  header nav .navLink {
+    color: $primaryGray;
+    font-size: 1.5rem;
+  }
+
+  .banner .actionCallContainer input {
+    width: 250px;
+  }
+  input {
+    font-size: 1rem;
+    margin-right: 2vw;
+  }
+  .banner .actionCallContainer {
+    width: 100%;
+  }
+  .banner {
+    flex-wrap: wrap;
+    padding: 0 20vw;
+  }
+  .banner img {
+    width: 150px;
+  }
+  .callToAction {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 705px) {
+  .banner {
+    padding: 0 10vw;
+  }
+  .callToAction,
+  footer .bottomFooter input {
+    height: 30px;
+  }
+  footer .bottomFooter input {
+    width: 250px;
+  }
+}
+
+@media (max-width: 600px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+  p,
+  footer .bottomFooter .footerLinksContainer .footerLink,
+  footer .bottomFooter .copyrightContainer p {
+    font-size: 0.8rem;
+  }
+  .featureContainer .featureInfo {
+    width: 100%;
+    text-align: center;
+    margin-top: 250px;
+    margin-bottom: 10%;
+  }
+  .featureContainer {
+    flex-wrap: wrap;
+    position: relative;
+  }
+  .featureContainer img {
+    margin: 0;
+    position: absolute;
+    top:5%;
+    width: 125px;
+  }
+  .featureContainer .phoneGif {
+    margin-left: 110px;
+    width: 250px;
+  }
+  .featureContainer .featureInfo p{
+    margin: 2vh 0;
+  }
+}
+@media (max-width: 500px){
+  .banner .actionCallContainer input, footer .bottomFooter input{
+    width: 150px;
+  }
+}
+@media (max-width: 450px){
+  h1,
+  h2 {
+    font-size: 1rem;
+  }
+  header{
+    justify-content: space-between;
+    
+  }
+  header .logo{
+    width: 40%;
+    height: auto;
+    padding-left: 5vw;
+  }
+  .mobileNavIcon{
+    margin-right: 5vw;
+  }
+ 
+}
+@media( max-width: 350px){
+  footer .bottomFooter .callToAction{
+    flex-direction: column;
+    height: 100px;
+    button{
+      height: auto;
+      margin-top: 5%;
+    }
+    
+  }
+  footer .bottomFooter .errorMsg{
+    top:0;
+    position: relative;
+    text-align: center;
+  }
+  .featureContainer .phoneGif{
+    width: 200px;
+  }
+
+  .featureContainer img{
+    width: 100px;
+  }
+}
+@media (max-width: 344px){
+  .banner .actionCallContainer input{
+    margin-bottom: 2%;
+  }
+  .banner img{
+    width: 100px;
+  }
 }

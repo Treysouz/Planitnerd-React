@@ -16,7 +16,7 @@
       margin: 5vh 0;
     }
     input {
-      height: 54px;
+      height: 100%;
       width: 425px;
     }
     .errorMsg {
@@ -37,6 +37,9 @@
     margin: 0 7vw;
     width: 300px;
     height: auto;
+  }
+  .phoneGif{
+    width: 500px;
   }
   .featureInfo {
     width: 650px;
