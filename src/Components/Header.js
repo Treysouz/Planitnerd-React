@@ -15,10 +15,13 @@ export default class Header extends Component {
     window.onresize = this.checkMobile;
     this.checkMobile();
     document.getElementById("mainSection").addEventListener("click", ()=>{
-      document.getElementById("mobileNavIcon").classList.remove("active");
-      this.setState({
-        mobileNav: false,
-      })
+      if(document.getElementById("mobileNavIcon")!== null){
+        document.getElementById("mobileNavIcon").classList.remove("active");
+        this.setState({
+          mobileNav: false,
+        })
+      }
+     
     })
   }
   checkMobile = () => {
