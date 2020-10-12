@@ -79,7 +79,9 @@ export default class Home extends Component {
           <div className="featureInfo">
             <h2>Got Points? Get Excited for Your Upcoming Trip</h2>
             <p>
-              While looking to see how you can spend your credit card travel points on your next trip, collaborate with your friends to build awesome itenaries & get everything you need to plan at your fingertips.
+              While looking to see how you can spend your credit card travel points on your next trip, 
+              collaborate with your friends to build awesome itenaries & 
+              get everything you need to plan at your fingertips.
             </p>
           </div>
         </div>
@@ -103,11 +105,11 @@ export default class Home extends Component {
             alt="Resources Flow"
           ></img>
           <div className="featureInfo">
-            <h2>Creating A Community of Travellers</h2>
+            <h2>Utilize Offers to Travel for Frees</h2>
             <p>
-              There are too many unreliable sources online when you’re planning
-              your trips. Get all your travel questions answered in one place
-              from trusted resources- your friends!
+            Leveraging your hard earned points and miles is confusing. Learn tips and tricks on how to 
+            travel the world for free with your points through our curated 
+            resources and other partner offers.
             </p>
           </div>
         </div>
