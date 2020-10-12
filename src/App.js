@@ -18,7 +18,7 @@ export default class App extends Component {
               <Home />
             </Route>
             <Route exact path="/blog">
-              {/* <Blog /> */}
+              <Blog />
             </Route>
           </Switch>
           <Footer></Footer>
