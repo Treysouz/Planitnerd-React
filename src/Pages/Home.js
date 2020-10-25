@@ -94,14 +94,14 @@ export default class Home extends Component {
               from trusted resources- your friends!
             </p>
           </div>
-          <img
-            src={require("../Assets/Images/section2.png")}
+          <img className="phoneGif"
+            src={require("../Assets/Images/planitnerdOne copy.gif")}
             alt="Community Flow"
           ></img>
         </div>
         <div className="featureContainer">
-          <img
-            src={require("../Assets/Images/section3.png")}
+          <img className="phoneGif"
+            src={require("../Assets/Images/planitnerdTwo copy.gif")}
             alt="Resources Flow"
           ></img>
           <div className="featureInfo">
