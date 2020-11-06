@@ -52,10 +52,10 @@ export default class Home extends Component {
       <section id="mainSection"> 
         <div className="banner">
           <div className="actionCallContainer fadeInUp">
-            <h1>Planning Trips With Points Has Never Been Easier</h1>
+            <h1>Your Personal Travel Points Planner</h1>
             <p>
-              Collaborate & build your own itineraries, get all your travel
-              questions answered, & learn how to travel for free.
+              Build and browse iteneraries, have your points quations answered, learn
+              best ways to use and earn points for future travel.
             </p>
             <div className="callToAction">
               {" "}
@@ -77,21 +77,20 @@ export default class Home extends Component {
             alt="Points Flow"
           ></img>
           <div className="featureInfo">
-            <h2>Got Points? Get Excited for Your Upcoming Trip</h2>
+            <h2>Got Points? Explore Different Ways to Redeem For Travel</h2>
             <p>
-              While looking to see how you can spend your credit card travel points on your next trip, 
-              collaborate with your friends to build awesome itenaries & 
-              get everything you need to plan at your fingertips.
+              Leveraging your credit card points is confusing. Build your own or browse through different
+              iteneraries to see how your peers have redeemed their points and miles for their trips! 
             </p>
           </div>
         </div>
         <div className="featureContainer">
           <div className="featureInfo">
-            <h2>Creating A Community of Travellers</h2>
+            <h2>Calling All (Points) Nerds</h2>
             <p>
-              There are too many unreliable sources online when you’re planning
-              your trips. Get all your travel questions answered in one place
-              from trusted resources- your friends!
+              Creating a community for veteran card points hacking enthusiasts and beginnners looking to get
+              in on the action. Get all your credit cards and points earning questions answered in one place from 
+              trusted resources-- your friends!
             </p>
           </div>
           <img className="phoneGif"
@@ -105,11 +104,10 @@ export default class Home extends Component {
             alt="Resources Flow"
           ></img>
           <div className="featureInfo">
-            <h2>Utilize Offers to Travel for Frees</h2>
+            <h2>Learn All About Which Credit Cards To Get Next</h2>
             <p>
-            Leveraging your hard earned points and miles is confusing. Learn tips and tricks on how to 
-            travel the world for free with your points through our curated 
-            resources and other partner offers.
+            There are many credit cards out there, but which one is right for you? Explore your options
+            and benefits all in one place. 
             </p>
           </div>
         </div>

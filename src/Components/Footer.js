@@ -13,8 +13,8 @@ export default class Footer extends Component {
     return (
       <footer>
         <div className="topFooter">
-          <h2>Love Planning Trips for Others?</h2>
-          <p>Contact us to become a guide & get paid to create itineraries.</p>
+          <h2>Are You A Points Guru? We Want To Hear From You!</h2>
+          <p>Contact us to become a guide & get paid to help others navigate their points strategies.</p>
         </div>
         <div className="bottomFooter">
           <div className="callToAction">
@@ -56,6 +56,11 @@ export default class Footer extends Component {
             <p>© Copyright 2020 | Planitnerd, Inc.</p>
             <br></br>
             <p>ALL RIGHTS RESERVED</p>
+          </div>
+          <div className="badgeContainer">
+            {/* <img className="badge"
+          src={require("../Assets/Icons/google-play-badge.png")}>
+          </img> */}
           </div>
         </div>
       </footer>

@@ -48,6 +48,9 @@ export default class Header extends Component {
   render() {
     return (
       <header>
+        {/* <img className="badge"
+        src={require("../Assets/Icons/google-play-badge.png")}>
+        </img> */}
         <img
           className="logo"
           src={require("../Assets/Icons/logo.png")}
