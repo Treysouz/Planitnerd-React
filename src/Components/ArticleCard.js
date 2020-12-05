@@ -7,21 +7,23 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-
+import Article from "./Article";
 export default class ArticleCard extends Component {
+  constructor() {
+    super();
+    this.state = {
+      moduleView: true,
+    };
+  }
   render() {
     return (
-      <figure className="articleCard">
-        <img src={require("../Assets/Images/glob.png")} />
+      <figure className="articleCard" onClick={()=>this.props.setArticle(this.props.title, this.props.description, this.props.date, this.props.image)}>
+        <img src={this.props.image} />
         <figcaption>
-          <h2>Lorem ipsum dolor sit amet</h2>
+          <h2>{this.props.title}</h2>
           <h3>By Angel Acosta</h3>
-          <h3>
-            Scelerisque in dictum non consectetur. Donec pretium vulputate
-            sapien nec sagittis. Ipsum dolor sit amet consectetur adipiscing
-            elit pellentesque habitant.{" "}
-          </h3>
-          <span>September 14, 2020</span>
+          <h3>{this.props.description}</h3>
+          <span>{this.props.date}</span>
         </figcaption>
       </figure>
     );
