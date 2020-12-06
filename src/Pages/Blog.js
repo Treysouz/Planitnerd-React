@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import TagBar from "../Components/TagBar";
 import ArticleCard from "../Components/ArticleCard";
+import Article from "../Components/Article";
 import ItineraryCard from "../Components/ItineraryCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,22 +11,125 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
+const axios = require("axios").default;
 
 export default class Blog extends Component {
+  constructor() {
+    super();
+    this.state = {
+      blogData: null,
+      moduleView: false,
+      articleTitle: null,
+      articleDate: null,
+      articleImage: null,
+      articleDesc: null,
+    };
+  }
+  setArticle = (title, desc, date, image) => {
+    this.setState({
+      articleTitle: title,
+      articleDate: date,
+      articleDesc: desc,
+      articleImage: image,
+      moduleView: true,
+    });
+  };
+  toggleModule = () => {
+    this.setState({
+      moduleView: !this.state.moduleView,
+    });
+  };
+  componentDidMount() {
+    axios
+      .post("https://api.planitnerd.com/api/v1/user/authenticate", {
+        email: "tremayne@planitnerd.com",
+        password: "TSnerd123!!",
+        userType: "Admin",
+        loginType: "Email",
+      })
+      .then((response) => {
+        // handle success
+        axios({
+          method: "GET",
+          url: "https://api.planitnerd.com/api/v1/resources/all-resources/1",
+          headers: {
+            accesstoken: response.data.token,
+          },
+        }).then((response) => {
+          this.setState({
+            blogData: response.data.results.docs,
+          });
+        });
+      })
+      .catch(function (error) {
+        // handle error
+        console.log(error);
+      })
+      .then(function () {
+        // always executed
+      });
+  }
+  componentDidUpdate() {
+    this.state.moduleView
+      ? (document.getElementsByTagName("body")[0].style.overflow = "hidden")
+      : (document.getElementsByTagName("body")[0].style.overflow = "auto");
+  }
   render() {
     return (
       <section id="mainSection">
+        {this.state.moduleView ? (
+          <Article
+            toggleModule={this.toggleModule}
+            title={this.state.articleTitle}
+            description={this.state.articleDesc}
+            image={this.state.articleImage}
+            date={this.state.articleDate}
+          ></Article>
+        ) : null}
         <div className="blogArea">
-          
           <div className="newsContainer">
             <h1>
               <hr />
               <span>Updates</span>
               <hr />
             </h1>
-            <TagBar></TagBar>
+            {/* <TagBar></TagBar> */}
             <div className="updatePostsContainer">
-            <ArticleCard></ArticleCard>
+              {this.state.blogData
+                ? this.state.blogData.map((value, index) => {
+                    var dateCreated = new Date(value.createdAt);
+                    var months = [
+                      "January",
+                      "February",
+                      "March",
+                      "April",
+                      "May",
+                      "June",
+                      "July",
+                      "August",
+                      "September",
+                      "October",
+                      "November",
+                      "December",
+                    ];
+                    var dateFormatted =
+                      months[dateCreated.getMonth()] +
+                      " " +
+                      dateCreated.getDate() +
+                      ", " +
+                      dateCreated.getFullYear();
+                    return (
+                      <ArticleCard
+                        setArticle={this.setArticle}
+                        key={value._id}
+                        title={value.title}
+                        description={value.description}
+                        image={value.attachment.location}
+                        date={dateFormatted}
+                      ></ArticleCard>
+                    );
+                  })
+                : null}
             </div>
             <button className="readMore">Read More</button>
           </div>
@@ -35,9 +139,9 @@ export default class Blog extends Component {
               <span>Itineraries</span>
               <hr />
             </h1>
-            <TagBar></TagBar>
+            {/* <TagBar></TagBar> */}
             <div className="updatePostsContainer">
-            <ItineraryCard></ItineraryCard>
+              <ItineraryCard></ItineraryCard>
             </div>
             <button className="readMore">Read More</button>
           </div>
@@ -47,10 +151,8 @@ export default class Blog extends Component {
               <span style={{ whiteSpace: "nowrap" }}>Partner Offers</span>
               <hr />
             </h1>
-            <TagBar></TagBar>
-            <div className="updatePostsContainer">
-     
-            </div>
+            {/* <TagBar></TagBar> */}
+            <div className="updatePostsContainer"></div>
             <button className="readMore">Read More</button>
           </div>
         </div>

@@ -7,7 +7,6 @@
   margin: 0;
   padding: 0;
   font-family: $primaryFont;
-
 }
 
 ::-webkit-scrollbar {
@@ -72,7 +71,7 @@ header {
     }
   }
 }
-main{
+main {
   overflow-x: hidden;
 }
 button {
@@ -88,7 +87,7 @@ button {
   color: white;
   text-align: center;
   border: none;
-  &:hover{
+  &:hover {
     cursor: pointer;
   }
 }
@@ -375,15 +374,15 @@ section {
     width: 100%;
     display: inline-block;
   }
-  .mobileNavIcon{
+  .mobileNavIcon {
     font-size: 1.5rem;
-    &:hover{
+    &:hover {
       color: $primaryGreen;
-      transition: color .5s;
+      transition: color 0.5s;
     }
-    &.active{
+    &.active {
       color: $primaryGreen;
-      transition: color .5s;
+      transition: color 0.5s;
     }
   }
   .navDrawer {
@@ -468,305 +467,305 @@ section {
   .featureContainer img {
     margin: 0;
     position: absolute;
-    top:5%;
+    top: 5%;
     width: 125px;
   }
   .featureContainer .phoneGif {
     margin-left: 110px;
     width: 250px;
   }
-  .featureContainer .featureInfo p{
+  .featureContainer .featureInfo p {
     margin: 2vh 0;
   }
 }
-@media (max-width: 500px){
-  .banner .actionCallContainer input, footer .bottomFooter input{
+@media (max-width: 500px) {
+  .banner .actionCallContainer input,
+  footer .bottomFooter input {
     width: 150px;
   }
 }
-@media (max-width: 450px){
+@media (max-width: 450px) {
   h1,
   h2 {
     font-size: 1rem;
   }
-  header{
+  header {
     justify-content: space-between;
-    
   }
-  header .logo{
+  header .logo {
     width: 40%;
     height: auto;
     padding-left: 5vw;
   }
-  .mobileNavIcon{
+  .mobileNavIcon {
     margin-right: 5vw;
   }
- 
 }
-@media( max-width: 350px){
-  footer .bottomFooter .callToAction{
+@media (max-width: 350px) {
+  footer .bottomFooter .callToAction {
     flex-direction: column;
     height: 100px;
-    button{
+    button {
       height: auto;
       margin-top: 5%;
     }
-    
   }
-  footer .bottomFooter .errorMsg{
-    top:0;
+  footer .bottomFooter .errorMsg {
+    top: 0;
     position: relative;
     text-align: center;
   }
-  .featureContainer .phoneGif{
+  .featureContainer .phoneGif {
     width: 200px;
   }
 
-  .featureContainer img{
+  .featureContainer img {
     width: 100px;
   }
 }
-@media (max-width: 344px){
-  .banner .actionCallContainer input{
+@media (max-width: 344px) {
+  .banner .actionCallContainer input {
     margin-bottom: 2%;
   }
-  .banner img{
+  .banner img {
     width: 100px;
   }
 }
 @media (max-height: 950px) and (min-width: 1550px), (max-width: 1900px) {
   .blogArea .updatePostsContainer {
-      height: 550px;
+    height: 550px;
   }
   .blogArea .articleCard:first-child {
-      min-height: 550px;
-      width: 550px;
+    height: 550px;
+    width: 550px;
   }
   .blogArea .articleCard {
-      min-height: 225px;
-      width: 450px;
+    height: 225px;
+    width: 450px;
   }
-  .blogArea .articleCard:first-of-type h2{
-      font-size: 1.8rem;
+  .blogArea .articleCard:first-of-type h2 {
+    font-size: 1.8rem;
   }
-  .blogArea .articleCard:first-of-type h3{
-      font-size: 1.3rem;
+  .blogArea .articleCard:first-of-type h3 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard:first-of-type figcaption span{
-      font-size: .9rem;
+  .blogArea .articleCard:first-of-type figcaption span {
+    font-size: 0.9rem;
   }
-  .blogArea .articleCard figcaption h2,.blogArea .itineraryCard h2{
-      font-size:1.3rem;
-
+  .blogArea .articleCard figcaption h2,
+  .blogArea .itineraryCard h2 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard figcaption h3,.blogArea .itineraryCard figcaption h3{
-      font-size:  1rem;
+  .blogArea .articleCard figcaption h3,
+  .blogArea .itineraryCard figcaption h3 {
+    font-size: 1rem;
   }
 }
 
-@media (max-height: 850px) and (min-width: 1400px), (max-width: 1600px)  {
+@media (max-height: 850px) and (min-width: 1400px), (max-width: 1600px) {
   .blogArea .updatePostsContainer {
-      height: 500px;
+    height: 500px;
   }
   .blogArea .articleCard:first-child {
-      min-height: 500px;
-      width: 500px;
+    height: 500px;
+    width: 500px;
   }
   .blogArea .articleCard {
-      min-height: 200px;
-      width: 400px;
+    height: 200px;
+    width: 400px;
   }
 
-  .blogArea .articleCard:first-of-type h2{
-      font-size: 1.8rem;
+  .blogArea .articleCard:first-of-type h2 {
+    font-size: 1.8rem;
   }
-  .blogArea .articleCard:first-of-type h3{
-      font-size: 1.3rem;
+  .blogArea .articleCard:first-of-type h3 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard:first-of-type figcaption span{
-      font-size: .9rem;
+  .blogArea .articleCard:first-of-type figcaption span {
+    font-size: 0.9rem;
   }
-  .blogArea .articleCard figcaption h2,.blogArea .itineraryCard h2{
-      font-size:1.3rem;
-
+  .blogArea .articleCard figcaption h2,
+  .blogArea .itineraryCard h2 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard figcaption h3,.blogArea .itineraryCard figcaption h3{
-      font-size:  1rem;
+  .blogArea .articleCard figcaption h3,
+  .blogArea .itineraryCard figcaption h3 {
+    font-size: 1rem;
   }
 }
 
-@media (max-height: 775px) and (min-width: 1200px), (max-width: 1400px)  {
+@media (max-height: 775px) and (min-width: 1200px), (max-width: 1400px) {
   .blogArea .updatePostsContainer {
-      height: 400px;
+    height: 400px;
   }
   .blogArea .articleCard:first-child {
-      min-height: 400px;
-      width: 400px;
+    height: 400px;
+    width: 400px;
   }
   .blogArea .articleCard {
-      min-height: 175px;
-      width: 350px;
+    height: 175px;
+    width: 350px;
   }
-  .blogArea .articleCard:first-of-type h2{
-      font-size: 1.5rem;
+  .blogArea .articleCard:first-of-type h2 {
+    font-size: 1.5rem;
   }
-  .blogArea .articleCard:first-of-type h3{
-      font-size: 1rem;
+  .blogArea .articleCard:first-of-type h3 {
+    font-size: 1rem;
   }
-  .blogArea .articleCard:first-of-type figcaption span{
-      font-size: .8rem;
+  .blogArea .articleCard:first-of-type figcaption span {
+    font-size: 0.8rem;
   }
-  .blogArea .articleCard figcaption h2,.blogArea .itineraryCard h2{
-      font-size:1rem;
-
+  .blogArea .articleCard figcaption h2,
+  .blogArea .itineraryCard h2 {
+    font-size: 1rem;
   }
-  .blogArea .articleCard figcaption h3,.blogArea .itineraryCard figcaption h3{
-      font-size: .8rem;
+  .blogArea .articleCard figcaption h3,
+  .blogArea .itineraryCard figcaption h3 {
+    font-size: 0.8rem;
   }
 }
 
-@media( max-width: 1200px){
-  .blogArea .updatePostsContainer{
-      height: auto;
-      flex-direction: row;
-      justify-content: space-around;
+@media (max-width: 1200px) {
+  .blogArea .updatePostsContainer {
+    height: auto;
+    flex-direction: row;
+    justify-content: space-around;
   }
   .blogArea .articleCard {
-   
-      width: 45vw;
-      margin-bottom: 5%;
-      min-height: 45vw;
+    width: 45vw;
+    margin-bottom: 5%;
+    height: 45vw;
   }
-  .blogArea .articleCard img{
-      height: 50%;
-      width: 100%;
-      float: none;
-      border-radius: 10px 10px 0 0;
+  .blogArea .articleCard img {
+    height: 50%;
+    width: 100%;
+    float: none;
+    border-radius: 10px 10px 0 0;
   }
-  .blogArea .articleCard figcaption{
-      margin-top: 2%;
-      float: none;
-      height: 50%;
-      width: 100%;
+  .blogArea .articleCard figcaption {
+    margin-top: 2%;
+    float: none;
+    height: 50%;
+    width: 100%;
   }
 
-  .blogArea .articleCard:first-of-type img{
-      max-height: 250px;
+  .blogArea .articleCard:first-of-type img {
+    max-height: 250px;
   }
   .blogArea .articleCard:first-child {
-      min-height: 40vw;
-      width: 100%;
-      margin-right: 0;
+    height: 40vw;
+    width: 100%;
+    margin-right: 0;
   }
-  .blogArea .articleCard:first-of-type h2{
-      font-size: 1.8rem;
-
+  .blogArea .articleCard:first-of-type h2 {
+    font-size: 1.8rem;
   }
-  .blogArea .articleCard:first-of-type h3{
-      font-size: 1.3rem;
+  .blogArea .articleCard:first-of-type h3 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard:first-of-type figcaption span{
-      font-size: .9rem;
+  .blogArea .articleCard:first-of-type figcaption span {
+    font-size: 0.9rem;
   }
-  .blogArea .articleCard:first-of-type figcaption{
-      padding: 0 4%;
-      margin-top: 1%;
+  .blogArea .articleCard:first-of-type figcaption {
+    padding: 0 4%;
+    margin-top: 1%;
   }
-  .blogArea .articleCard figcaption h2{
-      font-size:1.3rem;
-      margin-bottom: 1%;
-
+  .blogArea .articleCard figcaption h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1%;
   }
-  .blogArea .articleCard figcaption h2,.blogArea .itineraryCard h2{
-      font-size:1.3rem;
-
+  .blogArea .articleCard figcaption h2,
+  .blogArea .itineraryCard h2 {
+    font-size: 1.3rem;
   }
-  .blogArea .articleCard figcaption h3,.blogArea .itineraryCard figcaption h3{
-      font-size:  1rem;
+  .blogArea .articleCard figcaption h3,
+  .blogArea .itineraryCard figcaption h3 {
+    font-size: 1rem;
   }
-  .module-overlay .module h1{
-      font-size: 3rem;
+  .moduleOverlay .module h1 {
+    font-size: 3rem;
   }
-  .module-overlay .module .post-info h2{
-      font-size: 1.5rem;
+  .moduleOverlay .module .postInfo h2 {
+    font-size: 1.5rem;
   }
-  .module-overlay .module .post-info h3,  .module-overlay .module p{
-      font-size: 1rem;
-  }
-  .module-overlay .module img{
-      height: 40vw;
+  .moduleOverlay .module .postInfo h3,
+  .moduleOverlay .module p {
+    font-size: 1rem;
   }
 
 }
 
-@media(max-width: 1050px){
+@media (max-width: 1050px) {
   .blogArea .articleCard:first-of-type {
-      min-height: 400px;
+    height: 400px;
   }
-  .blogArea .articleCard:first-of-type h2{
-      font-size: 1.5rem;
+  .blogArea .articleCard:first-of-type h2 {
+    font-size: 1.5rem;
   }
-  .blogArea .articleCard:first-of-type h3{
-      font-size: .8rem;
+  .blogArea .articleCard:first-of-type h3 {
+    font-size: 0.8rem;
   }
-  .blogArea .articleCard:first-of-type figcaption span{
-      font-size: .8rem;
+  .blogArea .articleCard:first-of-type figcaption span {
+    font-size: 0.8rem;
   }
-  .blogArea .articleCard figcaption h2,.blogArea .itineraryCard h2{
-      font-size:1rem;
-
+  .blogArea .articleCard figcaption h2,
+  .blogArea .itineraryCard h2 {
+    font-size: 1rem;
   }
-  .blogArea .articleCard figcaption h3,.blogArea .itineraryCard figcaption h3{
-      font-size: .8rem;
+  .blogArea .articleCard figcaption h3,
+  .blogArea .itineraryCard figcaption h3 {
+    font-size: 0.8rem;
   }
-  .blogArea .tagBar .tagsContainer{
+  .blogArea .tagBar .tagsContainer {
     width: 70%;
   }
 }
 
-@media( max-width: 650px){
-
+@media (max-width: 650px) {
+  .blogArea .articleCard figcaption {
+    margin-top: 0%;
+    padding: 1% 2%;
+  }
   .blogArea .articleCard {
-      
-      width: 90%;
-      margin-bottom: 5%;
-      min-height: 275px;
+    width: 90%;
+    margin-bottom: 5%;
+    height: 275px;
   }
-  .blogArea h1{
-      margin-bottom: 2%;
-  }
-
-  .blogArea .articleCard img{
-      height: 150px;
+  .blogArea h1 {
+    margin-bottom: 2%;
   }
 
-  .module-overlay .module{
-      width: 100%;
-      padding: 5%;
+  .blogArea .articleCard img {
+    height: 150px;
   }
-  .module-overlay .module{
-      text-shadow: 2px 2px black;
+
+  .moduleOverlay .module {
+    width: 100%;
+    padding: 5%;
   }
-  .module-overlay .module p{
-      letter-spacing: 1px;
-      background-color: rgba(0,0,0,.5);
+  .moduleOverlay .module {
+    text-shadow: 2px 2px black;
   }
-  .module-overlay .module h1{
-      font-size: 3rem;
-      padding: 0 1%;
+  .moduleOverlay .module p {
+    letter-spacing: 1px;
+    background-color: rgba(0, 0, 0, 0.5);
   }
-  .module-overlay .module .post-info h2{
-      font-size: 1.5rem;
+  .moduleOverlay .module h1 {
+    font-size: 3rem;
+    padding: 0 1%;
   }
-  .module-overlay .module .post-info h3{
-      font-size: 1.2rem;
+  .moduleOverlay .module .postInfo h2 {
+    font-size: 1.5rem;
   }
-  .module-overlay .module img{
-      height: 100vh;
-      position: absolute;
-      top: 0;
-      left: 0;
-      filter: brightness(.3);
-      z-index: -1;
+  .moduleOverlay .module .postInfo h3 {
+    font-size: 1.2rem;
+  }
+  .moduleOverlay .module img {
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: brightness(0.3);
+    z-index: -1;
   }
 }

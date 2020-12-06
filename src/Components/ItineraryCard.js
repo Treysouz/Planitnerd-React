@@ -12,13 +12,19 @@ export default class ArticleCard extends Component {
   render() {
     return (
       <figure className="itineraryCard">
-        <img src={require("../Assets/Images/glob.png")} />
-        <h2>Place</h2>
+        <img
+          className="itineraryImg"
+          src={require("../Assets/Images/glob.png")}
+        />
+        <h2 className="placeContainer">Place</h2>
+        <h2 className="pointsContainer">100 Points</h2>
         <figcaption>
-         
-          <h3>By Angel Acosta</h3>
-        
-          <span>September 14, 2020</span>
+          <img></img>
+          <h3>Angel Acosta</h3>
+          <div className="datePostedContainer">
+            <span>September 14, 2020</span>
+            <span>1:48 AM</span>
+          </div>
         </figcaption>
       </figure>
     );
