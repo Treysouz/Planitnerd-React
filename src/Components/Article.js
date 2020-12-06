@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faFacebookF,
-  faInstagram,
-  faTwitter,
-  faLinkedinIn,
-} from "@fortawesome/free-brands-svg-icons";
+import {faTimes} from "@fortawesome/free-solid-svg-icons";
 
 export default class Article extends Component {
   render() {
     return (
       <section className="moduleOverlay" >
+        <FontAwesomeIcon className="exitBtn" icon={faTimes}  onClick={()=>this.props.toggleModule()}></FontAwesomeIcon>
         <div className="moduleBackground" onClick={()=>this.props.toggleModule()}></div>
         <div className="module">
           <div className="post-info">
