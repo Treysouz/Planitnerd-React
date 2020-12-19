@@ -43,6 +43,7 @@
     width: 100%;
     display: inline-block;
     border-bottom: 3px inset #56acbf;
+    border-top: none;
   }
   .newsContainer {
     width: 100%;
@@ -97,7 +98,7 @@
     }
     &:hover {
       transition: box-shadow 0.5s, transform 0.5s;
-      box-shadow: 0px 0px 5px 1px gray;
+      box-shadow: 0px 0px 5px 2px gray;
       cursor: pointer;
       transform: scale(1.02);
     }
@@ -163,7 +164,7 @@
     position: relative;
     &:hover {
       transition: box-shadow 0.5s, transform 0.5s;
-      box-shadow: 0px 0px 5px 1px gray;
+      box-shadow: 0px 0px 5px 2px gray;
       cursor: pointer;
       transform: scale(1.02);
     }

@@ -11,13 +11,15 @@ import {
   faTwitter,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-const axios = require("axios").default;
+// const axios = require("axios").default;
+import axios from "axios";
 
 export default class Blog extends Component {
   constructor() {
     super();
     this.state = {
-      blogData: null,
+      articleData: null,
+      itineraryData: null,
       moduleView: false,
       articleTitle: null,
       articleDate: null,
@@ -57,8 +59,17 @@ export default class Blog extends Component {
           },
         }).then((response) => {
           this.setState({
-            blogData: response.data.results.docs,
+            articleData: response.data.results.docs,
           });
+        });
+        axios({
+          method: "GET",
+          url: "https://api.planitnerd.com/api/v1/trip/all-posted-trips/1",
+          headers: {
+            accesstoken: response.data.token,
+          },
+        }).then((response) => {
+          console.log(response);
         });
       })
       .catch(function (error) {
@@ -95,8 +106,8 @@ export default class Blog extends Component {
             </h1>
             {/* <TagBar></TagBar> */}
             <div className="updatePostsContainer">
-              {this.state.blogData
-                ? this.state.blogData.map((value, index) => {
+              {this.state.articleData
+                ? this.state.articleData.map((value, index) => {
                     var dateCreated = new Date(value.createdAt);
                     var months = [
                       "January",

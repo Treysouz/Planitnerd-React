@@ -145,6 +145,7 @@
   width: 100%;
   display: inline-block;
   border-bottom: 3px inset #56acbf;
+  border-top: none;
 }
 
 .blogArea .newsContainer {
@@ -229,8 +230,8 @@
   transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
   transition: box-shadow 0.5s, transform 0.5s;
   transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
-  -webkit-box-shadow: 0px 0px 5px 1px gray;
-          box-shadow: 0px 0px 5px 1px gray;
+  -webkit-box-shadow: 0px 0px 5px 2px gray;
+          box-shadow: 0px 0px 5px 2px gray;
   cursor: pointer;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -311,8 +312,8 @@
   transition: -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
   transition: box-shadow 0.5s, transform 0.5s;
   transition: box-shadow 0.5s, transform 0.5s, -webkit-box-shadow 0.5s, -webkit-transform 0.5s;
-  -webkit-box-shadow: 0px 0px 5px 1px gray;
-          box-shadow: 0px 0px 5px 1px gray;
+  -webkit-box-shadow: 0px 0px 5px 2px gray;
+          box-shadow: 0px 0px 5px 2px gray;
   cursor: pointer;
   -webkit-transform: scale(1.02);
           transform: scale(1.02);
@@ -566,7 +567,8 @@ h2 {
 }
 
 p {
-  font-size: 1.5rem;
+  font-size: 2rem;
+  line-height: 3.5rem;
 }
 
 header {
@@ -655,14 +657,13 @@ button:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   height: 50px;
   position: relative;
 }
 
 .callToAction button {
   height: 100%;
+  white-space: nowrap;
 }
 
 input {
@@ -971,7 +972,8 @@ section {
   p,
   footer .bottomFooter .footerLinksContainer .footerLink,
   footer .bottomFooter .copyrightContainer p {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
   }
   .featureContainer img {
     width: 200px;
@@ -992,7 +994,8 @@ section {
   p,
   footer .bottomFooter .footerLinksContainer .footerLink,
   footer .bottomFooter .copyrightContainer p {
-    font-size: 1rem;
+    font-size: 1.5rem;
+    line-height: 2rem;
   }
   .featureContainer img {
     width: 150px;
