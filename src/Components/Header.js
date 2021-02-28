@@ -47,7 +47,7 @@ export default class Header extends Component {
   };
   render() {
     return (
-      <header>
+      <header id="navHeader">
         {/* <img className="badge"
         src={require("../Assets/Icons/google-play-badge.png")}>
         </img> */}
@@ -78,6 +78,9 @@ export default class Header extends Component {
             <Link className="navLink" to="/">
               Contact
             </Link>
+
+              <button>Early Access</button>
+     
           </nav>
         )}
         {this.state.mobileNav ? (

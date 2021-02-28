@@ -9,10 +9,10 @@ export default class Home extends Component {
     // console.log( bounding.right <=
     //   (window.innerWidth || document.documentElement.clientWidth));
     return (
-      bounding.top >= -(window.innerHeight/4)  &&
+      bounding.top >= -(window.innerHeight/1.5)  &&
       bounding.left >= 0 &&
       bounding.bottom <=
-        (window.innerHeight+(window.innerHeight/4) || document.documentElement.clientHeight + (document.documentElement.clientHeight/4)) &&
+        (window.innerHeight+(window.innerHeight/1.5) || document.documentElement.clientHeight + (document.documentElement.clientHeight/1.5)) &&
       bounding.right <=
         (window.innerWidth || document.documentElement.clientWidth)
     );
@@ -21,6 +21,14 @@ export default class Home extends Component {
   componentDidMount() {
     window.addEventListener("scroll", () => {
       // console.log(this.inViewport(document.querySelectorAll(".featureContainer")[0]));
+      var scroll = window.scrollY;
+      const element = document.getElementById("navHeader");
+      if (scroll > 0){
+       
+        element.classList.add("active");
+      }else{
+        element.classList.remove("active");
+      }
       document.querySelectorAll(".featureContainer").forEach((el) => {
         if (
           this.inViewport(el) &&
@@ -58,7 +66,6 @@ export default class Home extends Component {
               best ways to use and earn points for future travel.
             </p>
             <div className="callToAction">
-              {" "}
               <input type="email" placeholder="Enter your email"></input>{" "}
               <button>Get early access</button>
               <span className="errorMsg">Email is required</span>
@@ -72,8 +79,8 @@ export default class Home extends Component {
           ></img>
         </div>
         <div className="featureContainer">
-          <img className="phoneGif"
-            src={require("../Assets/Images/cellupdated.gif")}
+          <img 
+            src={require("../Assets/Images/suitcase.GIF")}
             alt="Points Flow"
           ></img>
           <div className="featureInfo">
@@ -93,13 +100,13 @@ export default class Home extends Component {
               trusted resources-- your friends!
             </p>
           </div>
-          <img className="phoneGif"
+          <img 
             src={require("../Assets/Images/planitnerdOne copy.gif")}
             alt="Community Flow"
           ></img>
         </div>
         <div className="featureContainer">
-          <img className="phoneGif"
+          <img 
             src={require("../Assets/Images/planitnerdTwo copy.gif")}
             alt="Resources Flow"
           ></img>

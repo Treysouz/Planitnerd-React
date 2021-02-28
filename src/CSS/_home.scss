@@ -1,6 +1,6 @@
 .banner {
   height: 90vh;
-  background-color: $secondaryGray;
+  background-color: $secondaryGreen;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -30,26 +30,25 @@
 .featureContainer {
   height: 90vh;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  padding: 0 5vw;
   align-items: center;
   img {
     opacity: 0;
     margin: 0 7vw;
-    width: 300px;
+    width: 600px;
     height: auto;
-  }
-  .phoneGif{
-    width: 500px;
   }
   .featureInfo {
     width: 650px;
     opacity: 0;
     h2 {
-      color: $primaryGreen;
-      font-weight: bold;
+      color: black;
+      font-weight: 900;
     }
     p {
       margin: 5vh 0;
+      color: $primaryBlack;
     }
   }
 }

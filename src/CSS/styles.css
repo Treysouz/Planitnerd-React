@@ -1,7 +1,8 @@
 @import url("//db.onlinewebfonts.com/c/4c549f58ac7bed64fa40dbe9b3ca6ed4?family=Archer+Semibold");
+@import url("//db.onlinewebfonts.com/c/1f386639b52564cd55b0c3a9f9b0ffa0?family=ArcherBold");
 .banner {
   height: 90vh;
-  background-color: #e6e7e9;
+  background-color: #edf7f8;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -44,9 +45,9 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 0 5vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -55,12 +56,8 @@
 .featureContainer img {
   opacity: 0;
   margin: 0 7vw;
-  width: 300px;
+  width: 600px;
   height: auto;
-}
-
-.featureContainer .phoneGif {
-  width: 500px;
 }
 
 .featureContainer .featureInfo {
@@ -69,12 +66,13 @@
 }
 
 .featureContainer .featureInfo h2 {
-  color: #56acbf;
-  font-weight: bold;
+  color: black;
+  font-weight: 900;
 }
 
 .featureContainer .featureInfo p {
   margin: 5vh 0;
+  color: #212529;
 }
 
 .blogArea {
@@ -552,10 +550,14 @@
 
 h1,
 h2,
-h3,
+h3, a {
+  color: #212529;
+  font-family: "ArcherBold", sans-serif;
+}
+
 p,
 span {
-  color: #212529;
+  font-family: "Archer Semibold", sans-serif;
 }
 
 h1 {
@@ -563,12 +565,12 @@ h1 {
 }
 
 h2 {
-  font-size: 3.5rem;
+  font-size: 3rem;
 }
 
 p {
   font-size: 2rem;
-  line-height: 3.5rem;
+  line-height: 2rem;
 }
 
 header {
@@ -583,10 +585,17 @@ header {
   height: 10vh;
   position: fixed;
   width: 100vw;
+  background-color: #edf7f8;
+  z-index: 1;
+  -webkit-transition: -webkit-box-shadow 0.15s linear;
+  transition: -webkit-box-shadow 0.15s linear;
+  transition: box-shadow 0.15s linear;
+  transition: box-shadow 0.15s linear, -webkit-box-shadow 0.15s linear;
+}
+
+header.active {
   -webkit-box-shadow: 0px 0px 3px 1px gray;
           box-shadow: 0px 0px 3px 1px gray;
-  background-color: white;
-  z-index: 1;
 }
 
 header .logo {
@@ -603,7 +612,7 @@ header nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  width: 25%;
+  width: 30%;
 }
 
 header nav .navLink {
@@ -624,11 +633,13 @@ main {
 }
 
 button {
-  background: #56acbf;
+  background: #212529;
   border-color: #56acbf;
+  width: 175px;
+  height: 50px;
   border-radius: 0.3rem;
   font-size: 1.5rem;
-  padding: 2% 1%;
+  padding: 2% 3%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,10 +652,12 @@ button {
   color: white;
   text-align: center;
   border: none;
+  white-space: nowrap;
 }
 
 button:hover {
   cursor: pointer;
+  opacity: .8;
 }
 
 .callToAction {
@@ -654,9 +667,9 @@ button:hover {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   height: 50px;
   position: relative;
 }

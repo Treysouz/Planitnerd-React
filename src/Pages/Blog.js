@@ -58,6 +58,7 @@ export default class Blog extends Component {
             accesstoken: response.data.token,
           },
         }).then((response) => {
+          console.log(response);
           this.setState({
             articleData: response.data.results.docs,
           });
