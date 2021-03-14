@@ -7,6 +7,7 @@
 	margin: 0;
 	padding: 0;
   font-family: $secondaryFont;
+  scroll-behavior: smooth;
 }
 
 ::-webkit-scrollbar {
@@ -41,8 +42,17 @@ h2 {
 	font-size: 3rem;
 }
 p {
-	font-size: 2rem;
+	font-size: 1.5rem;
 	line-height: 2rem;
+}
+b{
+	font-family: $primaryFont;
+	text-decoration: underline;
+}
+
+.logo {
+	width: 200px;
+	height: auto;
 }
 header {
 	display: flex;
@@ -58,15 +68,12 @@ header {
   &.active{
     box-shadow: 0px 0px 3px 1px gray;
   }
-	.logo {
-		width: 200px;
-		height: auto;
-	}
+	
 	nav {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
-		width: 30%;
+		width: 700px;
 
 		.navLink {
 			text-decoration: none;
@@ -86,11 +93,10 @@ main {
 button {
 	background: $primaryBlack;
 	border-color: $primaryGreen;
-  width: 175px;
-  height: 50px;
+
 	border-radius: 0.3rem;
 	font-size: 1.5rem;
-	padding: 2% 3%;
+	padding: 10px 15px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -110,10 +116,6 @@ button {
 
 	height: 50px;
 	position: relative;
-	button {
-		height: 100%;
-		white-space: nowrap;
-	}
 }
 input {
 	padding: 2% 1%;
@@ -134,7 +136,7 @@ input {
 footer {
 	height: 90vh;
 	.topFooter {
-		background-color: $secondaryGray;
+		background-color: white;
 		height: 40%;
 		width: 100%;
 		display: flex;
@@ -147,8 +149,8 @@ footer {
 		}
 	}
 	.bottomFooter {
-		padding: 3% 5%;
-		background-color: $primaryGray;
+		padding: 2% 5%;
+		background-color: $secondaryGreen;
 		height: 60%;
 		width: 100%;
 		display: flex;
@@ -176,13 +178,23 @@ footer {
 				justify-content: center;
 				align-items: center;
 			}
-			.iconLinks {
-				margin-top: 5%;
+			.textLinks{
+				padding-top: 3vh;
+			}
+			.iconLinks{
+				.footerLink{
+					background-color: white;
+					padding: 10px;
+					width: 3rem;
+					height: 3rem;
+					text-align: center;
+					border-radius: 100%;
+				}
 			}
 			.footerLink {
 				text-decoration: none;
-				color: white;
-				text-transform: uppercase;
+				color: black;
+				text-transform: capitalize;
 				font-weight: 600;
 				font-size: 1.5rem;
 				margin: 0 1vw;
@@ -285,9 +297,7 @@ section {
 
 /*----- Media Queries ----- */
 @media (max-width: 1400px), (max-height: 600px) {
-	header nav {
-		width: 30%;
-	}
+
 	h1 {
 		font-size: 3rem;
 	}
@@ -378,7 +388,7 @@ section {
 		font-size: 1rem;
 	}
 	header nav {
-		width: 40%;
+		width: 500px;
 	}
 }
 @media (max-width: 800px), (max-height: 300px) {
@@ -507,7 +517,7 @@ section {
 	header {
 		justify-content: space-between;
 	}
-	header .logo {
+	.logo {
 		width: 40%;
 		height: auto;
 		padding-left: 5vw;

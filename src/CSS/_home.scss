@@ -1,54 +1,105 @@
 .banner {
-  height: 90vh;
-  background-color: $secondaryGreen;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  img {
-    width: 450px;
-    height: auto;
-    margin-left: 5vw;
-  }
-  .actionCallContainer {
-    width: 650px;
-
-    p {
-      margin: 5vh 0;
+    height: 90vh;
+    background-color: $secondaryGreen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../Assets/Images/bg-showcase.jpg');
+    background-size: cover;
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    img {
+        width: 450px;
+        height: auto;
+        margin-left: 5vw;
     }
-    input {
-      height: 100%;
-      width: 425px;
+    .actionCallContainer {
+        width: 650px;
+        padding-bottom: 15vh;
+        .introContainer {
+          padding-bottom: 5vh;
+            p {
+                margin: 5vh 0;
+            }
+        }
+        input {
+            height: 100%;
+            width: 425px;
+        }
+        .errorMsg {
+            color: red;
+            margin-top: 2.5%;
+            display: inline-block;
+            padding-left: 0.5%;
+        }
+        .inputContainer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .callToAction {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            p{
+              padding-bottom: 2vh;
+            }
+        }
     }
-    .errorMsg {
-      color: red;
-      margin-top: 2.5%;
-      display: inline-block;
-      padding-left: 0.5%;
-    }
-  }
 }
 .featureContainer {
-  height: 90vh;
-  display: flex;
-  justify-content: space-around;
-  padding: 0 5vw;
-  align-items: center;
-  img {
-    opacity: 0;
-    margin: 0 7vw;
-    width: 600px;
-    height: auto;
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 0 5vw;
+    align-items: center;
+    span[role=img]{
+      font-size: 2.5rem;
+    }
+    .sectionImage {
+        opacity: 0;
+        margin: 0 7vw;
+        width: 600px;
+        height: auto;
+    }
+    .featureInfo {
+        width: 500px;
+        opacity: 0;
+        .airplaneIcon{
+          display: inline-block;
+          width: 2rem;
+          height: auto;
+        }
+        h2 {
+            color: black;
+            font-weight: 900;
+        }
+        p {
+            margin: 5vh 0;
+            color: $primaryBlack;
+        }
+    }
+}
+
+#pointsSection{
+  background-image: url("../Assets/Images/bg-calling-all-nerds.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  &.featureContainer{
+    padding: 0;
+    padding-left: 15vw;
+    justify-content: space-between;
   }
-  .featureInfo {
-    width: 650px;
-    opacity: 0;
-    h2 {
-      color: black;
-      font-weight: 900;
-    }
-    p {
-      margin: 5vh 0;
-      color: $primaryBlack;
-    }
+  .sectionImage{
+    height: 100%;
+    width: auto;
+    margin: 0;
+  }
+}
+
+#creditSection{
+  background-color: #241e20;
+  h2,p{
+    color: white;
   }
 }

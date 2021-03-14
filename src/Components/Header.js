@@ -79,14 +79,13 @@ export default class Header extends Component {
               Contact
             </Link>
 
-              <button>Early Access</button>
+              <a href="#footer"><button>Early Access</button></a>
      
           </nav>
         )}
         {this.state.mobileNav ? (
           <nav className="navDrawer">
             <div className="mobileNav">
-              {" "}
               <Link
                 className="navLink"
                 to="/"
