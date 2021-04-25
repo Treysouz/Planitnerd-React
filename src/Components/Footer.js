@@ -11,36 +11,41 @@ import {
 export default class Footer extends Component {
     render() {
         return (
-            <footer id="footer">
-                <div className='topFooter'>
-                    <h2>Are You A Points Guru? We Want To Hear From You!</h2>
-                    <p>
-                        <b>Contact us </b>to become a guide & get paid to help
-                        others navigate their points strategies.
-                    </p>
-                </div>
+            <footer id='footer'>
+               
                 <div className='bottomFooter'>
                     <img
                         className='logo'
                         src={require('../Assets/Icons/logo.png')}
                         alt='Planitnerd'></img>
-                    <div className='callToAction'>
-                        <input
-                            type='email'
-                            placeholder='Enter your email'></input>{' '}
-                        <button>Get early access</button>
-                        <span className='errorMsg'>Email is required</span>
+                    <div className='actionCallContainer'>
+                        <div className='callToAction'>
+                            <div className='inputContainer'>
+                                <input
+                                    type='email'
+                                    placeholder='Enter your email'></input>
+                                <button>Get Early Access</button>
+                            </div>
+                            <span className='errorMsg'>Email is required</span>
+                        </div>
                     </div>
-
                     <div className='footerLinksContainer'>
                         <div className='textLinks'>
-                            <Link className='footerLink' to='/'>
+                            <a
+                                className='footerLink'
+                                href='https://planitnerd.s3.amazonaws.com/Planitnerd+Terms+of+Use.pdf'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 Terms of Service
-                            </Link>
+                            </a>
                             <span>|</span>
-                            <Link className='footerLink' to='/'>
+                            <a
+                                className='footerLink'
+                                href='https://planitnerd.s3.amazonaws.com/Planitnerd+Privacy+Policy.pdf'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 Privacy Policy
-                            </Link>
+                            </a>
                             <span>|</span>
                             <Link className='footerLink' to='/blog'>
                                 Contact Us
@@ -55,22 +60,38 @@ export default class Footer extends Component {
                     </div>
                     <div className='footerLinksContainer'>
                         <div className='iconLinks'>
-                            <Link className='footerLink' to='/'>
+                            <a
+                                className='footerLink'
+                                href='https://www.facebook.com/planitnerd'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 <FontAwesomeIcon
                                     icon={faFacebookF}></FontAwesomeIcon>
-                            </Link>
-                            <Link className='footerLink' to='/'>
+                            </a>
+                            <a
+                                className='footerLink'
+                                href='https://www.instagram.com/planitnerd'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 <FontAwesomeIcon
                                     icon={faInstagram}></FontAwesomeIcon>
-                            </Link>
-                            <Link className='footerLink' to='/blog'>
+                            </a>
+                            <a
+                                className='footerLink'
+                                href='https://twitter.com/planitnerd'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 <FontAwesomeIcon
                                     icon={faTwitter}></FontAwesomeIcon>
-                            </Link>
-                            <Link className='footerLink' to='/blog'>
+                            </a>
+                            <a
+                                className='footerLink'
+                                href='https://www.linkedin.com/company/planitnerd'
+                                target='_blank'
+                                rel='noopener noreferrer'>
                                 <FontAwesomeIcon
                                     icon={faLinkedinIn}></FontAwesomeIcon>
-                            </Link>
+                            </a>
                         </div>
                     </div>
                     {/* <div className='badgeContainer'>

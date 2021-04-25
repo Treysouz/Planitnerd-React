@@ -71,7 +71,6 @@ export default class Home extends Component {
                         </div>
 
                         <div className='callToAction'>
-                            <p>Get early access</p>
                             <div className="inputContainer">
                                 <input
                                     type='email'
@@ -86,9 +85,10 @@ export default class Home extends Component {
                         src={require('../Assets/Images/phone-top.png')}
                         alt='Phone'></img>
                 </div>
+                <div id="features" type="anchor" className="anchor"></div>
                 <div className='featureContainer'>
-                    <img className="sectionImage"
-                        src={require('../Assets/Images/suitcase.GIF')}
+                    <img className="sectionImage" style={{"clipPath": "inset(2px 2px 2px 2px)"}}
+                        src={require('../Assets/Images/luggage.gif')}
                         alt='Points Flow'></img>
                     <div className='featureInfo'>
                         <h2>
@@ -120,7 +120,7 @@ export default class Home extends Component {
                 </div>
                 <div className='featureContainer' id="creditSection">
                     <img className="sectionImage"
-                        src={require('../Assets/Images/card.GIF')}
+                        src={require('../Assets/Images/cc.gif')}
                         alt='Credit Card'></img>
                     <div className='featureInfo'>
                         <h2>Learn All About Which Credit Cards To Get Next <span role="img" aria-label="money">&#128184;</span></h2>
@@ -130,6 +130,13 @@ export default class Home extends Component {
                             all in one place.
                         </p>
                     </div>
+                </div>
+                <div className='topFooter'>
+                    <h2>Are You A Points Guru? We Want To Hear From You!</h2>
+                    <p>
+                        <b>Contact us</b> to become a guide & get paid to help
+                        others navigate their points strategies.
+                    </p>
                 </div>
             </section>
         );

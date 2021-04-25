@@ -44,8 +44,8 @@ export default class Blog extends Component {
   componentDidMount() {
     axios
       .post("https://api.planitnerd.com/api/v1/user/authenticate", {
-        email: "tremayne@planitnerd.com",
-        password: "TSnerd123!!",
+        email: process.env.REACT_APP_PN_EMAIL,
+        password: process.env.REACT_APP_PN_PASSWORD,
         userType: "Admin",
         loginType: "Email",
       })

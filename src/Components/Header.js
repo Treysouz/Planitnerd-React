@@ -1,7 +1,9 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { HashLink } from 'react-router-hash-link';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
+
 
 export default class Header extends Component {
   constructor() {
@@ -69,9 +71,9 @@ export default class Header extends Component {
             <Link className="navLink" to="/">
               Home
             </Link>
-            <Link className="navLink" to="/">
+            <HashLink className="navLink" to="/#features">
               Features
-            </Link>
+            </HashLink>
             <Link className="navLink" to="/blog">
               Resources
             </Link>

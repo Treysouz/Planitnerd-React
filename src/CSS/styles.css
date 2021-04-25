@@ -24,60 +24,6 @@
   margin-left: 5vw;
 }
 
-.banner .actionCallContainer {
-  width: 650px;
-  padding-bottom: 15vh;
-}
-
-.banner .actionCallContainer .introContainer {
-  padding-bottom: 5vh;
-}
-
-.banner .actionCallContainer .introContainer p {
-  margin: 5vh 0;
-}
-
-.banner .actionCallContainer input {
-  height: 100%;
-  width: 425px;
-}
-
-.banner .actionCallContainer .errorMsg {
-  color: red;
-  margin-top: 2.5%;
-  display: inline-block;
-  padding-left: 0.5%;
-}
-
-.banner .actionCallContainer .inputContainer {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.banner .actionCallContainer .callToAction {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.banner .actionCallContainer .callToAction p {
-  padding-bottom: 2vh;
-}
-
 .featureContainer {
   height: 90vh;
   display: -webkit-box;
@@ -85,7 +31,7 @@
   display: flex;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  padding: 0 5vw;
+  padding: 5vh 5vw;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -97,9 +43,9 @@
 
 .featureContainer .sectionImage {
   opacity: 0;
-  margin: 0 7vw;
-  width: 600px;
-  height: auto;
+  margin: 0 1vw;
+  width: auto;
+  height: 100%;
 }
 
 .featureContainer .featureInfo {
@@ -127,20 +73,28 @@
   background-image: url("../Assets/Images/bg-calling-all-nerds.jpg");
   background-repeat: no-repeat;
   background-size: cover;
+  position: relative;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
 }
 
 #pointsSection.featureContainer {
   padding: 0;
   padding-left: 15vw;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+}
+
+#pointsSection.featureContainer .featureInfo {
+  z-index: 50;
 }
 
 #pointsSection .sectionImage {
   height: 100%;
   width: auto;
   margin: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
 #creditSection {
@@ -149,6 +103,31 @@
 
 #creditSection h2, #creditSection p {
   color: white;
+}
+
+.topFooter {
+  background-color: white;
+  height: 40vh;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 0 2vw;
+}
+
+.topFooter p {
+  margin-top: 2%;
 }
 
 .blogArea {
@@ -599,6 +578,70 @@
   z-index: -1;
 }
 
+.contactHeader {
+  height: 10vh;
+  width: 100vw;
+  background-color: #edf7f8;
+  text-align: center;
+}
+
+.formContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  gap: 10px;
+  padding: 5vh 5vw;
+}
+
+.formContainer form {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding-left: 10vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 30px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 100%;
+}
+
+.formContainer form .formGroup {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.formContainer form .formGroup label {
+  width: 300px;
+  padding-right: 5%;
+}
+
+.formContainer .formDescription {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 0 5vw;
+}
+
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -627,7 +670,8 @@
 
 h1,
 h2,
-h3, a {
+h3,
+a {
   color: #212529;
   font-family: "ArcherBold", sans-serif;
 }
@@ -645,7 +689,11 @@ h2 {
   font-size: 3rem;
 }
 
-p {
+h3 {
+  font-size: 2.5rem;
+}
+
+p, label {
   font-size: 1.5rem;
   line-height: 2rem;
 }
@@ -673,7 +721,7 @@ header {
   position: fixed;
   width: 100vw;
   background-color: #edf7f8;
-  z-index: 1;
+  z-index: 100;
   -webkit-transition: -webkit-box-shadow 0.15s linear;
   transition: -webkit-box-shadow 0.15s linear;
   transition: box-shadow 0.15s linear;
@@ -737,10 +785,35 @@ button {
 
 button:hover {
   cursor: pointer;
-  opacity: .8;
+  opacity: 0.8;
 }
 
-.callToAction {
+.anchor {
+  position: relative;
+  top: -10vh;
+}
+
+.actionCallContainer {
+  width: 650px;
+  padding-bottom: 15vh;
+}
+
+.actionCallContainer .introContainer p {
+  margin: 5vh 0;
+}
+
+.actionCallContainer input {
+  font-size: 1.2rem;
+  width: 425px;
+}
+
+.actionCallContainer .errorMsg {
+  color: red;
+  display: inline-block;
+  padding-left: 0.5%;
+}
+
+.actionCallContainer .inputContainer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -750,19 +823,46 @@ button:hover {
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
           align-items: stretch;
-  height: 50px;
-  position: relative;
+  gap: 10px;
 }
 
-input {
-  padding: 2% 1%;
+.actionCallContainer .callToAction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 10px;
+}
+
+.actionCallContainer .callToAction p {
+  padding-bottom: 2vh;
+}
+
+footer .actionCallContainer {
+  padding-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+input, textarea, select {
+  padding: 4px;
   font-size: 1.5rem;
   border-radius: 0.3rem;
   color: #495057;
   border: 1px solid #ced4da;
 }
 
-input:focus {
+input:focus, textarea:focus, select:focus {
   color: #495057;
   background-color: #fff;
   border-color: #80bdff;
@@ -772,37 +872,13 @@ input:focus {
 }
 
 footer {
-  height: 90vh;
-}
-
-footer .topFooter {
-  background-color: white;
-  height: 40%;
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  text-align: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-footer .topFooter p {
-  margin-top: 2%;
+  height: 50vh;
 }
 
 footer .bottomFooter {
   padding: 2% 5%;
   background-color: #edf7f8;
-  height: 60%;
+  height: 100%;
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -818,16 +894,9 @@ footer .bottomFooter {
           flex-direction: column;
 }
 
-footer .bottomFooter .errorMsg {
-  margin-top: 2%;
-  position: absolute;
-  top: 45px;
-}
-
 footer .bottomFooter input {
   width: 500px;
   margin-right: 1vw;
-  height: 50px;
 }
 
 footer .bottomFooter .footerLinksContainer {
@@ -1078,6 +1147,9 @@ section {
   .banner img {
     width: 400px;
   }
+  .featureContainer .sectionImage {
+    height: 70%;
+  }
 }
 
 @media (max-width: 1350px), (max-height: 450px) {
@@ -1101,6 +1173,9 @@ section {
   .banner img {
     width: 400px;
   }
+  #pointsSection.featureContainer {
+    padding-left: 5vw;
+  }
 }
 
 @media (max-width: 1200px), (max-height: 350px) {
@@ -1109,7 +1184,7 @@ section {
     font-size: 2rem;
   }
   .featureContainer {
-    padding: 0 2vw;
+    padding: 5vh 2vw;
   }
   .featureContainer img {
     width: 150px;
@@ -1118,9 +1193,6 @@ section {
   .featureContainer .phoneGif {
     width: 300px;
   }
-  .callToAction {
-    height: 50px;
-  }
   .banner img {
     width: 300px;
   }
@@ -1128,7 +1200,7 @@ section {
     padding: 0 2vw;
   }
   input {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .errorMsg {
     font-size: 0.8rem;
@@ -1140,13 +1212,67 @@ section {
     width: 300px;
   }
   button {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
   header nav .navLink {
     font-size: 1rem;
   }
   header nav {
     width: 500px;
+  }
+  .banner .actionCallContainer input {
+    font-size: 1rem;
+  }
+  .actionCallContainer input {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .featureContainer .sectionImage {
+    height: 50%;
+  }
+  .banner .actionCallContainer {
+    width: 75%;
+  }
+  .banner {
+    padding: 0 5vw;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-size: contain;
+  }
+  .banner img {
+    width: 200px;
+  }
+  .banner .actionCallContainer {
+    padding-bottom: 5vh;
+  }
+  .callToAction {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  button {
+    padding: 10px;
+  }
+  .banner .actionCallContainer .inputContainer {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    gap: 10px;
+  }
+  #pointsSection .sectionImage {
+    -webkit-filter: brightness(75%) opacity(0.2);
+            filter: brightness(75%) opacity(0.2);
+  }
+  #pointsSection.featureContainer {
+    padding-left: 0;
+  }
+  #pointsSection {
+    background: rgba(0, 0, 0, 0.5), url("/static/media/bg-calling-all-nerds.fb70e674.jpg");
   }
 }
 
@@ -1206,38 +1332,28 @@ section {
     color: #2c282c;
     font-size: 1.5rem;
   }
-  .banner .actionCallContainer input {
-    width: 250px;
-  }
   input {
     font-size: 1rem;
     margin-right: 2vw;
   }
-  .banner .actionCallContainer {
-    width: 100%;
+  h1,
+  h2 {
+    font-size: 2rem;
   }
-  .banner {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    padding: 0 20vw;
+  p,
+  footer .bottomFooter .footerLinksContainer .footerLink,
+  footer .bottomFooter .copyrightContainer p, label {
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
-  .banner img {
-    width: 150px;
-  }
-  .callToAction {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+  .featureContainer span[role=img] {
+    font-size: 1.5rem;
   }
 }
 
-@media (max-width: 705px) {
+@media (max-width: 700px) {
   .banner {
-    padding: 0 10vw;
-  }
-  .callToAction,
-  footer .bottomFooter input {
-    height: 30px;
+    padding: 5vw;
   }
   footer .bottomFooter input {
     width: 250px;
@@ -1245,20 +1361,50 @@ section {
 }
 
 @media (max-width: 600px) {
+  .banner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 2vh 5vw;
+  }
+  .banner .actionCallContainer {
+    width: 100%;
+  }
   h1,
   h2 {
     font-size: 2rem;
   }
   p,
   footer .bottomFooter .footerLinksContainer .footerLink,
-  footer .bottomFooter .copyrightContainer p {
-    font-size: 0.8rem;
+  footer .bottomFooter .copyrightContainer p, label {
+    font-size: 1rem;
   }
   .featureContainer .featureInfo {
-    width: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
-    margin-top: 250px;
-    margin-bottom: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 75%;
   }
   .featureContainer {
     -ms-flex-wrap: wrap;
@@ -1267,9 +1413,8 @@ section {
   }
   .featureContainer img {
     margin: 0;
-    position: absolute;
-    top: 5%;
     width: 125px;
+    margin-left: 0;
   }
   .featureContainer .phoneGif {
     margin-left: 110px;
@@ -1277,6 +1422,29 @@ section {
   }
   .featureContainer .featureInfo p {
     margin: 2vh 0;
+  }
+  .banner .actionCallContainer .introContainer p {
+    margin: 1vh 0;
+  }
+  .banner .actionCallContainer .errorMsg {
+    margin-top: 0px;
+  }
+  .featureContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .featureContainer .sectionImage {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
   }
 }
 
@@ -1305,25 +1473,22 @@ section {
   .mobileNavIcon {
     margin-right: 5vw;
   }
+  .featureContainer span[role='img'] {
+    font-size: 1rem;
+  }
+  p,
+  footer .bottomFooter .footerLinksContainer .footerLink,
+  footer .bottomFooter .copyrightContainer p, label {
+    font-size: .8rem;
+    line-height: 1rem;
+  }
+  footer .bottomFooter .footerLinksContainer .iconLinks .footerLink {
+    width: 2rem;
+    height: 2rem;
+  }
 }
 
 @media (max-width: 350px) {
-  footer .bottomFooter .callToAction {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    height: 100px;
-  }
-  footer .bottomFooter .callToAction button {
-    height: auto;
-    margin-top: 5%;
-  }
-  footer .bottomFooter .errorMsg {
-    top: 0;
-    position: relative;
-    text-align: center;
-  }
   .featureContainer .phoneGif {
     width: 200px;
   }

@@ -4,8 +4,11 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./Components/Header";
 import Home from "./Pages/Home";
 import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
-import $ from "jquery";
+
+
+
 
 
 
@@ -39,6 +42,9 @@ export default class App extends Component {
             </Route>
             <Route exact path="/blog">
               <Blog />
+            </Route>
+            <Route exact path="/contactus">
+              <Contact></Contact>
             </Route>
           </Switch>
           <Footer></Footer>
